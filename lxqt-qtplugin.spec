@@ -1,4 +1,4 @@
-%define git 20140803
+%define git 0
 Summary:	Qt plugin for the LXQt desktop
 Name:		lxqt-qtplugin
 Version:	0.8.0
@@ -31,7 +31,7 @@ can adopt settings of LXQt, such as the icon theme.
 %if %git
 %setup -qn %{name}-%{git}
 %else
-%setup -q -c %{name}-%{version}
+%setup -q
 %endif
 
 %build
