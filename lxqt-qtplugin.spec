@@ -1,12 +1,12 @@
 %define git 0
 Summary:	Qt plugin for the LXQt desktop
 Name:		lxqt-qtplugin
-Version:	0.8.0
+Version:	0.9.0
 %if %git
 Release:	0.%git.1
 Source0:	%{name}-%{git}.tar.xz
 %else
-Release:	3
+Release:	1
 Source0:	http://lxqt.org/downloads/lxqt/%{version}/%{name}-%{version}.tar.xz
 %endif
 License:	LGPLv2.1+
@@ -14,7 +14,7 @@ Group:		Graphical desktop/Other
 Url:		http://lxqt.org
 BuildRequires:	cmake
 BuildRequires:	qt5-devel
-BuildRequires:	pkgconfig(lxqt-qt5)
+BuildRequires:	pkgconfig(lxqt)
 BuildRequires:	cmake(Qt5LinguistTools)
 BuildRequires:	cmake(Qt5X11Extras)
 
