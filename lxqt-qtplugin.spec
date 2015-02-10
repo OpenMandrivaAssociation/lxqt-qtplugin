@@ -9,6 +9,7 @@ Source0:	%{name}-%{git}.tar.xz
 Release:	1
 Source0:	http://lxqt.org/downloads/lxqt/%{version}/%{name}-%{version}.tar.xz
 %endif
+Patch0:		lxqt-qtplugin-0.9.0-fix-cmake.patch
 License:	LGPLv2.1+
 Group:		Graphical desktop/Other
 Url:		http://lxqt.org
@@ -33,6 +34,7 @@ can adopt settings of LXQt, such as the icon theme.
 %else
 %setup -q
 %endif
+%apply_patches
 
 %build
 %cmake -DUSE_QT5:BOOL=ON

@@ -1,0 +1,12 @@
+diff -Naur lxqt-qtplugin-0.9.0/CMakeLists.txt lxqt-qtplugin-0.9.0.tpg/CMakeLists.txt
+--- lxqt-qtplugin-0.9.0/CMakeLists.txt	2014-11-01 19:22:22.000000000 +0000
++++ lxqt-qtplugin-0.9.0.tpg/CMakeLists.txt	2015-02-10 22:18:58.009169101 +0000
+@@ -8,7 +8,7 @@
+ find_package(Qt5Widgets REQUIRED QUIET)
+ find_package(Qt5LinguistTools REQUIRED QUIET)
+ 
+-find_package(lxqt-qt5 REQUIRED QUIET)
++find_package(lxqt REQUIRED QUIET)
+ 
+ include(${LXQT_USE_FILE})
+ 
