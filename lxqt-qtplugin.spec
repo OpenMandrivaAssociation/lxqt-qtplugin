@@ -6,7 +6,7 @@ Version:	0.9.0
 Release:	0.%git.1
 Source0:	%{name}-%{git}.tar.xz
 %else
-Release:	1
+Release:	2
 Source0:	http://lxqt.org/downloads/lxqt/%{version}/%{name}-%{version}.tar.xz
 %endif
 Patch0:		lxqt-qtplugin-0.9.0-fix-cmake.patch
@@ -14,10 +14,16 @@ License:	LGPLv2.1+
 Group:		Graphical desktop/Other
 Url:		http://lxqt.org
 BuildRequires:	cmake
+BuildRequires:  kwindowsystem-devel
 BuildRequires:	qt5-devel
-BuildRequires:	pkgconfig(lxqt)
-BuildRequires:	cmake(Qt5LinguistTools)
-BuildRequires:	cmake(Qt5X11Extras)
+BuildRequires:  pkgconfig(Qt5Gui)
+BuildRequires:  pkgconfig(Qt5LinguistTools)
+BuildRequires:  pkgconfig(Qt5Widgets)
+BuildRequires:	pkgconfig(Qt5Help)
+BuildRequires:	pkgconfig(Qt5Xdg)
+BuildRequires:  pkgconfig(lxqt) >= %{version}
+
+Requires:	%{_lib}Qt5Gui5
 
 %description
 LXQt system integration plugin for Qt. With this plugin, all Qt-based programs
