@@ -30,7 +30,8 @@ LXQt system integration plugin for Qt. With this plugin, all Qt-based programs
 can adopt settings of LXQt, such as the icon theme.
 
 %files
-%{_libdir}/qt5/plugins/platformthemes
+%dir %{_libdir}/qt5/plugins/platformthemes
+%{_libdir}/qt5/plugins/platformthemes/libqtlxqt.so
 
 #----------------------------------------------------------------------------
 
