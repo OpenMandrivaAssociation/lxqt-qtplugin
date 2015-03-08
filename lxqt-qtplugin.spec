@@ -23,7 +23,7 @@ BuildRequires:	pkgconfig(Qt5Help)
 BuildRequires:	pkgconfig(Qt5Xdg)
 BuildRequires:	pkgconfig(lxqt) >= %{version}
 
-Requires:	%{_lib}Qt5Gui5
+Requires:	%{_lib}qt5gui5
 
 %description
 LXQt system integration plugin for Qt. With this plugin, all Qt-based programs
