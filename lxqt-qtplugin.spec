@@ -14,14 +14,14 @@ License:	LGPLv2.1+
 Group:		Graphical desktop/Other
 Url:		http://lxqt.org
 BuildRequires:	cmake
-BuildRequires:  cmake(KF5WindowSystem)
+BuildRequires:	cmake(KF5WindowSystem)
 BuildRequires:	qt5-devel
-BuildRequires:  pkgconfig(Qt5Gui)
-BuildRequires:  pkgconfig(Qt5LinguistTools)
-BuildRequires:  pkgconfig(Qt5Widgets)
+BuildRequires:	pkgconfig(Qt5Gui)
+BuildRequires:	cmake(Qt5LinguistTools)
+BuildRequires:	pkgconfig(Qt5Widgets)
 BuildRequires:	pkgconfig(Qt5Help)
 BuildRequires:	pkgconfig(Qt5Xdg)
-BuildRequires:  pkgconfig(lxqt) >= %{version}
+BuildRequires:	pkgconfig(lxqt) >= %{version}
 
 Requires:	%{_lib}Qt5Gui5
 
