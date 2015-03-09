@@ -14,6 +14,7 @@ License:	LGPLv2.1+
 Group:		Graphical desktop/Other
 Url:		http://lxqt.org
 BuildRequires:	cmake
+BuildRequires:	qmake5
 BuildRequires:	cmake(Qt5Widgets)
 BuildRequires:	cmake(Qt5LinguistTools)
 BuildRequires:	cmake(lxqt)
