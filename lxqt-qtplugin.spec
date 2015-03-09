@@ -9,7 +9,7 @@ Source0:	%{name}-%{git}.tar.xz
 Release:	2
 Source0:	http://lxqt.org/downloads/lxqt/%{version}/%{name}-%{version}.tar.xz
 %endif
-Patch0:		lxqt-qtplugin-0.9.0-fix-cmake.patch
+#Patch0:		lxqt-qtplugin-0.9.0-fix-cmake.patch
 License:	LGPLv2.1+
 Group:		Graphical desktop/Other
 Url:		http://lxqt.org
@@ -21,7 +21,7 @@ BuildRequires:	cmake(Qt5LinguistTools)
 BuildRequires:	pkgconfig(Qt5Widgets)
 BuildRequires:	pkgconfig(Qt5Help)
 BuildRequires:	pkgconfig(Qt5Xdg)
-BuildRequires:	pkgconfig(lxqt) >= %{version}
+BuildRequires:	pkgconfig(lxqt-qt5) >= %{version}
 
 Requires:	%{_lib}qt5gui5
 
