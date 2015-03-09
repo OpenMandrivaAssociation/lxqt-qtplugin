@@ -14,16 +14,9 @@ License:	LGPLv2.1+
 Group:		Graphical desktop/Other
 Url:		http://lxqt.org
 BuildRequires:	cmake
-BuildRequires:	cmake(KF5WindowSystem)
-BuildRequires:	qt5-devel
-BuildRequires:	pkgconfig(Qt5Gui)
+BuildRequires:	cmake(Qt5Widgets)
 BuildRequires:	cmake(Qt5LinguistTools)
-BuildRequires:	pkgconfig(Qt5Widgets)
-BuildRequires:	pkgconfig(Qt5Help)
-BuildRequires:	pkgconfig(Qt5Xdg)
-BuildRequires:	pkgconfig(lxqt-qt5) >= %{version}
-
-Requires:	%{_lib}qt5gui5
+BuildRequires:	cmake(lxqt)
 
 %description
 LXQt system integration plugin for Qt. With this plugin, all Qt-based programs
@@ -44,7 +37,7 @@ can adopt settings of LXQt, such as the icon theme.
 %apply_patches
 
 %build
-%cmake -DUSE_QT5:BOOL=ON
+%cmake
 %make
 
 %install
