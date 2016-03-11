@@ -6,7 +6,7 @@ Version:	0.10.0
 Release:	1.%git.1
 Source0:	%{name}-%{git}.tar.xz
 %else
-Release:	4
+Release:	5
 Source0:	http://downloads.lxqt.org/lxqt/%{version}/%{name}-%{version}.tar.xz
 %endif
 #Patch0:		lxqt-qtplugin-0.9.0-fix-cmake.patch
