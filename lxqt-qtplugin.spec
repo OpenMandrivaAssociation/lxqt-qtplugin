@@ -1,7 +1,7 @@
 %define git 0
 Summary:	Qt plugin for the LXQt desktop
 Name:		lxqt-qtplugin
-Version:	0.11.0
+Version:	0.11.1
 %if %git
 Release:	1.%git.1
 Source0:	%{name}-%{git}.tar.xz
@@ -9,7 +9,6 @@ Source0:	%{name}-%{git}.tar.xz
 Release:	1
 Source0:	http://downloads.lxqt.org/lxqt/%{version}/%{name}-%{version}.tar.xz
 %endif
-#Patch0:		lxqt-qtplugin-0.9.0-fix-cmake.patch
 License:	LGPLv2.1+
 Group:		Graphical desktop/Other
 Url:		http://lxqt.org
@@ -18,10 +17,12 @@ BuildRequires:	qmake5
 BuildRequires:	cmake(Qt5Gui)
 BuildRequires:	cmake(Qt5Widgets)
 BuildRequires:	cmake(Qt5LinguistTools)
+BuildRequires:	cmake(Qt5XdgIconLoader)
 BuildRequires:	cmake(lxqt)
 BuildRequires:	cmake(dbusmenu-qt5)
-Requires:		%{_lib}qt5gui5
-Requires:		%{_lib}qt5gui5-x11
+BuildRequires:	cmake(lxqt-build-tools)
+Requires:	%{_lib}qt5gui5
+Requires:	%{_lib}qt5gui5-x11
 
 %description
 LXQt system integration plugin for Qt. With this plugin, all Qt-based programs
@@ -47,4 +48,3 @@ can adopt settings of LXQt, such as the icon theme.
 
 %install
 %makeinstall_std -C build
-
