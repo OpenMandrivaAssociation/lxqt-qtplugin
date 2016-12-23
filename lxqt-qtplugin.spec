@@ -17,7 +17,7 @@ BuildRequires:	qmake5
 BuildRequires:	cmake(Qt5Gui)
 BuildRequires:	cmake(Qt5Widgets)
 BuildRequires:	cmake(Qt5LinguistTools)
-BuildRequires:	cmake(Qt5XdgIconLoader)
+BuildRequires:	cmake(qt5xdgiconloader)
 BuildRequires:	cmake(lxqt)
 BuildRequires:	cmake(dbusmenu-qt5)
 BuildRequires:	cmake(lxqt-build-tools)
