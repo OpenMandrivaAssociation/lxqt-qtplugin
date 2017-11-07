@@ -21,6 +21,7 @@ BuildRequires:	cmake(qt5xdgiconloader)
 BuildRequires:	cmake(lxqt)
 BuildRequires:	cmake(dbusmenu-qt5)
 BuildRequires:	cmake(lxqt-build-tools)
+BuildRequires:	cmake(fm-qt)
 BuildRequires:	git-core
 Requires:	%{_lib}qt5gui5
 Requires:	%{_lib}qt5gui5-x11
