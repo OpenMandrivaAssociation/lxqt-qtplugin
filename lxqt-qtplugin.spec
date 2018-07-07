@@ -3,7 +3,7 @@ Summary:	Qt plugin for the LXQt desktop
 Name:		lxqt-qtplugin
 Version:	0.13.0
 %if %git
-Release:	1.%git.1
+Release:	0.%git.1
 Source0:	%{name}-%{git}.tar.xz
 %else
 Release:	1
@@ -23,6 +23,7 @@ BuildRequires:	cmake(dbusmenu-qt5)
 BuildRequires:	cmake(lxqt-build-tools)
 BuildRequires:	cmake(fm-qt)
 BuildRequires:	pkgconfig(libmenu-cache)
+BuildRequires:	pkgconfig(libexif)
 BuildRequires:	git-core
 Requires:	%{_lib}qt5gui5
 Requires:	%{_lib}qt5gui5-x11
