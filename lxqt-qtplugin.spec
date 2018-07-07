@@ -22,6 +22,7 @@ BuildRequires:	cmake(lxqt)
 BuildRequires:	cmake(dbusmenu-qt5)
 BuildRequires:	cmake(lxqt-build-tools)
 BuildRequires:	cmake(fm-qt)
+BuildRequires:	pkgconfig(libfm-extra)
 BuildRequires:	pkgconfig(libmenu-cache)
 BuildRequires:	pkgconfig(libexif)
 BuildRequires:	git-core
