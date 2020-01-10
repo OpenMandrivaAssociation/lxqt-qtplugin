@@ -45,7 +45,7 @@ can adopt settings of LXQt, such as the icon theme.
 %else
 %setup -q
 %endif
-%apply_patches
+%autopatch -p1
 
 %build
 %cmake_qt5
