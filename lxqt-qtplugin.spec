@@ -6,7 +6,7 @@ Version:	0.14.0
 Release:	0.%git.1
 Source0:	%{name}-%{git}.tar.xz
 %else
-Release:	2
+Release:	3
 Source0:	https://downloads.lxqt.org/downloads/%{name}/%{version}/%{name}-%{version}.tar.xz
 %endif
 License:	LGPLv2.1+
@@ -48,8 +48,8 @@ can adopt settings of LXQt, such as the icon theme.
 %autopatch -p1
 
 %build
-%cmake_qt5
+%cmake_qt5_build
 %make
 
 %install
-%makeinstall_std -C build
+%make_install -C build
