@@ -48,8 +48,8 @@ can adopt settings of LXQt, such as the icon theme.
 %autopatch -p1
 
 %build
-%cmake_qt5_build
-%make
+%cmake_qt5
+%make_build
 
 %install
 %make_install -C build
