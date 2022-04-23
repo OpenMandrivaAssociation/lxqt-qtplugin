@@ -1,9 +1,9 @@
 %define git 0
 Summary:	Qt plugin for the LXQt desktop
 Name:		lxqt-qtplugin
-Version:	1.0.0
+Version:	1.1.0
 %if %git
-Release:	0.%git.1
+Release:	1.%git.1
 Source0:	%{name}-%{git}.tar.xz
 %else
 Release:	1
