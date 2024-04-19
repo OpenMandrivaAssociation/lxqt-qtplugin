@@ -25,8 +25,6 @@ BuildRequires:	pkgconfig(libfm-extra)
 BuildRequires:	pkgconfig(libmenu-cache)
 BuildRequires:	pkgconfig(libexif)
 BuildRequires:	git-core
-Requires:	%{_lib}qt6gui6
-Requires:	%{_lib}qt6gui6-x11
 
 %description
 LXQt system integration plugin for Qt. With this plugin, all Qt-based programs
