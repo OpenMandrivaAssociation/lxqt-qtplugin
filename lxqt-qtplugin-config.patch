@@ -1,0 +1,43 @@
+diff -up lxqt-qtplugin-2.0.0/src/lxqtplatformtheme.cpp.omv~ lxqt-qtplugin-2.0.0/src/lxqtplatformtheme.cpp
+--- lxqt-qtplugin-2.0.0/src/lxqtplatformtheme.cpp.omv~	2024-05-01 23:00:36.623576441 +0200
++++ lxqt-qtplugin-2.0.0/src/lxqtplatformtheme.cpp	2024-05-01 23:07:17.135316269 +0200
+@@ -98,7 +98,7 @@ void LXQtPlatformTheme::loadSettings() {
+     settingsFile_ = settings.fileName();
+ 
+     // icon theme
+-    iconTheme_ = settings.value(QLatin1String("icon_theme"), QLatin1String("oxygen")).toString();
++    iconTheme_ = settings.value(QLatin1String("icon_theme"), QLatin1String("breeze")).toString();
+     iconFollowColorScheme_ = settings.value(QLatin1String("icon_follow_color_scheme"), iconFollowColorScheme_).toBool();
+ 
+     // read other widget related settings form LxQt settings.
+@@ -229,10 +229,10 @@ void LXQtPlatformTheme::loadSettings() {
+     settings.beginGroup(QLatin1String("Qt"));
+ 
+     // widget style
+-    style_ = settings.value(QLatin1String("style"), QLatin1String("fusion")).toString();
++    style_ = settings.value(QLatin1String("style"), QLatin1String("Breeze")).toString();
+ 
+     // SystemFont
+-    fontStr_ = settings.value(QLatin1String("font")).toString();
++    fontStr_ = settings.value(QLatin1String("font"), QLatin1String("Noto Sans,11,-1,5,400,0,0,0,0,0,0,0,0,0,0,1")).toString();
+ 
+     if(!fontStr_.isEmpty()) {
+         if(font_.fromString(fontStr_)) {
+@@ -243,7 +243,7 @@ void LXQtPlatformTheme::loadSettings() {
+     }
+ 
+     // FixedFont
+-    fixedFontStr_ = settings.value(QLatin1String("fixedFont")).toString();
++    fixedFontStr_ = settings.value(QLatin1String("fixedFont"), QLatin1String("Liberation Mono,11,-1,5,400,0,0,0,0,0,0,0,0,0,0,1")).toString();
+     if(!fixedFontStr_.isEmpty()) {
+         fixedFont_.fromString(fixedFontStr_);
+     }
+@@ -259,7 +259,7 @@ void LXQtPlatformTheme::loadSettings() {
+     // mouse cursor
+     QSettings sessionSettings(QSettings::UserScope, QLatin1String("lxqt"), QLatin1String("session"));
+     sessionSettings.beginGroup(QStringLiteral("Mouse"));
+-    mouseCursorTheme_ = sessionSettings.value(QLatin1String("cursor_theme"));
++    mouseCursorTheme_ = sessionSettings.value(QLatin1String("cursor_theme"), QLatin1String("breeze_cursors"));
+     int curSize = sessionSettings.value(QLatin1String("cursor_size"), 16).toInt();
+     mouseCursorSize_ = QSize(curSize, curSize);
+     sessionSettings.endGroup();

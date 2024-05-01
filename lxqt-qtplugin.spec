@@ -6,9 +6,10 @@ Version:	2.0.0
 Release:	0.%git.1
 Source0:	%{name}-%{git}.tar.xz
 %else
-Release:	1
+Release:	2
 Source0:	https://github.com/lxqt/lxqt-qtplugin/releases/download/%{version}/lxqt-qtplugin-%{version}.tar.xz
 %endif
+Patch:		lxqt-qtplugin-config.patch
 License:	LGPLv2.1+
 Group:		Graphical desktop/Other
 Url:		http://lxqt.org
