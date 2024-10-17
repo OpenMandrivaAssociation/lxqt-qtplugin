@@ -12,7 +12,7 @@ Source0:	https://github.com/lxqt/lxqt-qtplugin/releases/download/%{version}/lxqt
 Patch:		lxqt-qtplugin-config.patch
 License:	LGPLv2.1+
 Group:		Graphical desktop/Other
-Url:		http://lxqt.org
+Url:		https://lxqt.org
 BuildRequires:	cmake
 BuildRequires:	cmake(Qt6Gui)
 BuildRequires:	cmake(Qt6Widgets)
