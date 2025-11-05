@@ -1,7 +1,7 @@
-diff -up lxqt-qtplugin-2.0.0/src/lxqtplatformtheme.cpp.omv~ lxqt-qtplugin-2.0.0/src/lxqtplatformtheme.cpp
---- lxqt-qtplugin-2.0.0/src/lxqtplatformtheme.cpp.omv~	2024-05-01 23:00:36.623576441 +0200
-+++ lxqt-qtplugin-2.0.0/src/lxqtplatformtheme.cpp	2024-05-01 23:07:17.135316269 +0200
-@@ -98,7 +98,7 @@ void LXQtPlatformTheme::loadSettings() {
+diff -up lxqt-qtplugin-2.3.0/src/lxqtplatformtheme.cpp.1~ lxqt-qtplugin-2.3.0/src/lxqtplatformtheme.cpp
+--- lxqt-qtplugin-2.3.0/src/lxqtplatformtheme.cpp.1~	2025-11-05 12:32:44.000000000 +0100
++++ lxqt-qtplugin-2.3.0/src/lxqtplatformtheme.cpp	2025-11-05 18:44:25.247864980 +0100
+@@ -100,7 +100,7 @@ void LXQtPlatformTheme::loadSettings() {
      settingsFile_ = settings.fileName();
  
      // icon theme
@@ -10,7 +10,7 @@ diff -up lxqt-qtplugin-2.0.0/src/lxqtplatformtheme.cpp.omv~ lxqt-qtplugin-2.0.0/
      iconFollowColorScheme_ = settings.value(QLatin1String("icon_follow_color_scheme"), iconFollowColorScheme_).toBool();
  
      // read other widget related settings form LxQt settings.
-@@ -229,10 +229,10 @@ void LXQtPlatformTheme::loadSettings() {
+@@ -250,10 +250,10 @@ void LXQtPlatformTheme::loadSettings() {
      settings.beginGroup(QLatin1String("Qt"));
  
      // widget style
@@ -23,7 +23,7 @@ diff -up lxqt-qtplugin-2.0.0/src/lxqtplatformtheme.cpp.omv~ lxqt-qtplugin-2.0.0/
  
      if(!fontStr_.isEmpty()) {
          if(font_.fromString(fontStr_)) {
-@@ -243,7 +243,7 @@ void LXQtPlatformTheme::loadSettings() {
+@@ -264,7 +264,7 @@ void LXQtPlatformTheme::loadSettings() {
      }
  
      // FixedFont
@@ -32,12 +32,12 @@ diff -up lxqt-qtplugin-2.0.0/src/lxqtplatformtheme.cpp.omv~ lxqt-qtplugin-2.0.0/
      if(!fixedFontStr_.isEmpty()) {
          fixedFont_.fromString(fixedFontStr_);
      }
-@@ -259,7 +259,7 @@ void LXQtPlatformTheme::loadSettings() {
+@@ -280,7 +280,7 @@ void LXQtPlatformTheme::loadSettings() {
      // mouse cursor
      QSettings sessionSettings(QSettings::UserScope, QLatin1String("lxqt"), QLatin1String("session"));
      sessionSettings.beginGroup(QStringLiteral("Mouse"));
 -    mouseCursorTheme_ = sessionSettings.value(QLatin1String("cursor_theme"));
 +    mouseCursorTheme_ = sessionSettings.value(QLatin1String("cursor_theme"), QLatin1String("breeze_cursors"));
-     int curSize = sessionSettings.value(QLatin1String("cursor_size"), 16).toInt();
+     int curSize = sessionSettings.value(QLatin1String("cursor_size"), 24).toInt();
      mouseCursorSize_ = QSize(curSize, curSize);
      sessionSettings.endGroup();
