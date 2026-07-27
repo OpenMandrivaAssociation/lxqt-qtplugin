@@ -48,7 +48,7 @@ can adopt settings of LXQt, such as the icon theme.
 %build
 %cmake \
 	-G Ninja
-%ninja_build -C build
+%ninja_build
 
 %install
 %ninja_install -C build
