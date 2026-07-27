@@ -26,6 +26,7 @@ BuildRequires:	pkgconfig(libfm-extra)
 BuildRequires:	pkgconfig(libmenu-cache)
 BuildRequires:	pkgconfig(libexif)
 BuildRequires:	git-core
+BuildRequires: ninja
 
 %description
 LXQt system integration plugin for Qt. With this plugin, all Qt-based programs
@@ -44,10 +45,9 @@ can adopt settings of LXQt, such as the icon theme.
 %setup -q
 %endif
 %autopatch -p1
+%build
 %cmake \
 	-G Ninja
-
-%build
 %ninja_build -C build
 
 %install
