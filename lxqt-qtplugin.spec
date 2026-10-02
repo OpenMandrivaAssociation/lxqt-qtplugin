@@ -3,7 +3,7 @@ Summary:	Qt plugin for the LXQt desktop
 Name:		lxqt-qtplugin
 Version:	2.4.0
 %if 0%{?git:1}
-Release:	1.%git.2
+Release:	1.%git.3
 Source0:	%{name}-%{git}.tar.xz
 %else
 Release:	2
