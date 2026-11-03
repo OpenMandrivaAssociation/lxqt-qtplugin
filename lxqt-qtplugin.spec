@@ -23,6 +23,7 @@ BuildRequires:	cmake(lxqt)
 BuildRequires:	cmake(dbusmenu-lxqt) >= 0.5.0
 BuildRequires:	cmake(lxqt2-build-tools) >= 2.5.0
 BuildRequires:	cmake(fm-qt6) >= 2.5.0
+BuildRequires:	pkgconfig(gio-2.0)
 BuildRequires:	git-core
 
 %description
