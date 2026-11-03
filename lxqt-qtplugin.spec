@@ -1,12 +1,12 @@
 #define git 0
 Summary:	Qt plugin for the LXQt desktop
 Name:		lxqt-qtplugin
-Version:	2.4.0
+Version:	2.5.0
 %if 0%{?git:1}
 Release:	1.%git.3
 Source0:	%{name}-%{git}.tar.xz
 %else
-Release:	2
+Release:	1
 Source0:	https://github.com/lxqt/lxqt-qtplugin/releases/download/%{version}/lxqt-qtplugin-%{version}.tar.xz
 %endif
 Patch:		lxqt-qtplugin-config.patch
@@ -15,16 +15,14 @@ Group:		Graphical desktop/Other
 Url:		https://lxqt.org
 BuildSystem:	cmake
 BuildRequires:	cmake(Qt6Gui)
+BuildRequires:	cmake(Qt6GuiPrivate)
 BuildRequires:	cmake(Qt6Widgets)
 BuildRequires:	cmake(Qt6LinguistTools)
-BuildRequires:	cmake(qt6xdgiconloader)
+BuildRequires:	cmake(qt6xdgiconloader) >= 4.5.0
 BuildRequires:	cmake(lxqt)
-BuildRequires:	cmake(dbusmenu-lxqt)
-BuildRequires:	cmake(lxqt2-build-tools)
-BuildRequires:	cmake(fm-qt6)
-BuildRequires:	pkgconfig(libfm-extra)
-BuildRequires:	pkgconfig(libmenu-cache)
-BuildRequires:	pkgconfig(libexif)
+BuildRequires:	cmake(dbusmenu-lxqt) >= 0.5.0
+BuildRequires:	cmake(lxqt2-build-tools) >= 2.5.0
+BuildRequires:	cmake(fm-qt6) >= 2.5.0
 BuildRequires:	git-core
 
 %description
